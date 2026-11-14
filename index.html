@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Academy</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f6fb;color:#18243a}
+header{background:linear-gradient(135deg,#101d3a,#2455a4);color:white;text-align:center;padding:45px 15px}
+header h1{font-size:34px;margin:0 0 10px}
+header p{font-size:17px}
+nav{background:white;padding:14px;text-align:center}
+button{background:#f2a900;color:#14213d;border:0;padding:12px 18px;border-radius:7px;font-weight:bold;cursor:pointer;margin:4px}
+main{max-width:1000px;margin:auto;padding:20px}
+h2{color:#17366d}
+.intro,.course,.payment{background:white;padding:20px;border-radius:12px;margin-bottom:18px;box-shadow:0 3px 12px #00000010}
+.courses{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}
+.course h3{color:#2455a4}
+.tag{background:#fff0c9;color:#805900;padding:6px 10px;border-radius:20px;font-size:12px}
+.payment{text-align:center}
+footer{background:#101d3a;color:white;text-align:center;padding:25px}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Digital Academy</h1>
+<p><strong>Aprann jodi a, bati demen.</strong></p>
+<p>Fòmasyon pou konstwi avni dijital ou.</p>
+</header>
+
+<nav>
+<button onclick="language('ht')">Kreyòl</button>
+<button onclick="language('fr')">Français</button>
+</nav>
+
+<main>
+<section class="intro">
+<h2 id="welcome">Byenvini nan Digital Academy!</h2>
+<p id="description">Aprann nouvo konpetans dijital avèk kou pratik, videyo, tèks, imaj ak egzèsis.</p>
+<p><strong id="free">Enskripsyon gratis. Premye chapit chak kou gratis tou!</strong></p>
+</section>
+
+<h2 id="courseTitle">Dekouvri kou nou yo</h2>
+
+<section class="courses">
+<div class="course">
+<h3>Digital Marketing</h3>
+<p id="c1">Aprann fè pwomosyon pou pwodwi ak sèvis sou entènèt.</p>
+<span class="tag">Premye chapit gratis</span>
+</div>
+
+<div class="course">
+<h3>Artificial Intelligence (AI)</h3>
+<p id="c2">Dekouvri entèlijans atifisyèl ak zouti AI.</p>
+<span class="tag">Premye chapit gratis</span>
+</div>
+
+<div class="course">
+<h3>Dropshipping</h3>
+<p id="c3">Aprann baz komès sou entènèt.</p>
+<span class="tag">Premye chapit gratis</span>
+</div>
+
+<div class="course">
+<h3>Trading</h3>
+<p id="c4">Aprann mache finansye, risk ak jesyon lajan.</p>
+<span class="tag">Premye chapit gratis</span>
+</div>
+
+<div class="course">
+<h3>Video & Content Creation</h3>
+<p id="c5">Aprann kreye videyo ak kontni pou rezo sosyal.</p>
+<span class="tag">Premye chapit gratis</span>
+</div>
+
+<div class="course">
+<h3>Digital Skills</h3>
+<p id="c6">Aprann sèvi ak zouti dijital ak entènèt.</p>
+<span class="tag">Premye chapit gratis</span>
+</div>
+</section>
+
+<h2 id="paymentTitle">Metòd peman</h2>
+<section class="payment">
+<h3>MonCash</h3>
+<p id="mon">Peman MonCash ap disponib lè sistèm nan aktive.</p>
+<h3>NatCash</h3>
+<p id="nat">Peman NatCash ap disponib lè sistèm nan aktive.</p>
+<p><strong id="warning">Atansyon: Peman reyèl poko aktive. Pa voye lajan sou paj sa a.</strong></p>
+</section>
+
+<section class="intro">
+<h2 id="methodTitle">Fason n ap anseye</h2>
+<p id="method">Chak kou ap gen videyo, tèks, imaj ak egzèsis pou ede elèv yo aprann epi pratike.</p>
+</section>
+</main>
+
+<footer>
+<p>Digital Academy © 2026</p>
+<p>Aprann jodi a, bati demen.</p>
+</footer>
+
+<script>
+function language(lang){
+const fr=lang==='fr';
+const texts={
+welcome:[ "Byenvini nan Digital Academy!","Bienvenue à Digital Academy !"],
+description:["Aprann nouvo konpetans dijital avèk kou pratik, videyo, tèks, imaj ak egzèsis.","Apprenez de nouvelles compétences numériques avec des vidéos, des textes, des images et des exercices."],
+free:["Enskripsyon gratis. Premye chapit chak kou gratis tou!","Inscription gratuite. Le premier chapitre de chaque cours est également gratuit !"],
+courseTitle:["Dekouvri kou nou yo","Découvrez nos formations"],
+c1:["Aprann fè pwomosyon pou pwodwi ak sèvis sou entènèt.","Apprenez à promouvoir des produits et services en ligne."],
+c2:["Dekouvri entèlijans atifisyèl ak zouti AI.","Découvrez l'intelligence artificielle et ses outils."],
+c3:["Aprann baz komès sou entènèt.","Apprenez les bases du commerce en ligne."],
+c4:["Aprann mache finansye, risk ak jesyon lajan.","Découvrez les marchés financiers, les risques et la gestion de l'argent."],
+c5:["Aprann kreye videyo ak kontni pou rezo sosyal.","Apprenez à créer des vidéos et du contenu pour les réseaux sociaux."],
+c6:["Aprann sèvi ak zouti dijital ak entènèt.","Apprenez à utiliser les outils numériques et Internet."],
+paymentTitle:["Metòd peman","Méthodes de paiement"],
+mon:["Peman MonCash ap disponib lè sistèm nan aktive.","Le paiement MonCash sera disponible lorsque le système sera activé."],
+nat:["Peman NatCash ap disponib lè sistèm nan aktive.","Le paiement NatCash sera disponible lorsque le système sera activé."],
+warning:["Atansyon: Peman reyèl poko aktive. Pa voye lajan sou paj sa a.","Attention : les paiements réels ne sont pas encore activés. N'envoyez pas d'argent sur cette page."],
+methodTitle:["Fason n ap anseye","Notre méthode d'apprentissage"],
+method:["Chak kou ap gen videyo, tèks, imaj ak egzèsis pou ede elèv yo aprann epi pratike.","Chaque cours comprendra des vidéos, des textes, des images et des exercices pratiques."]
+};
+for(const id in texts){
+document.getElementById(id).textContent=texts[id][fr?1:0];
+}
+}
+</script>
+</body>
+</html>
